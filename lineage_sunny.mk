@@ -14,8 +14,12 @@ $(call inherit-product, device/xiaomi/sunny/device.mk)
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
+MISTOS_MAINTAINER="ZNAIV"
+TARGET_ENABLE_BLUR := false
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := false
+WITH_GMS := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_sunny
