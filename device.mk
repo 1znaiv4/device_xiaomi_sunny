@@ -350,7 +350,7 @@ PRODUCT_PACKAGES += \
     TelephonySunny \
     WifiSunny
 
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay-lineage
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Perf
 PRODUCT_COPY_FILES += \
