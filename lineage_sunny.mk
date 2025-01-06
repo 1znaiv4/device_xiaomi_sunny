@@ -13,9 +13,21 @@ $(call inherit-product, device/xiaomi/sunny/device.mk)
 
 # Inherit some common LineageOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
-# Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
+WITH_GMS := true
+TARGET_CORE_GMS := true
+TARGET_DEFAULT_PIXEL_LAUNCHER := true
+TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := false     
+
+# List of add-ons
+PRODUCT_PACKAGES += \
+    MarkupGoogle \
+    LatinIMEGooglePrebuilt \
+    AiWallpapers \
+    WallpaperEmojiPrebuilt \
+    PrebuiltDeskClockGoogle \
+    CalculatorGooglePrebuilt \
+    CalendarGooglePrebuilt
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_sunny
@@ -28,4 +40,6 @@ PRODUCT_SYSTEM_NAME := sunny
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    DeviceName=$(PRODUCT_SYSTEM_NAME)
+    DeviceName=$(PRODUCT_SYSTEM_NAME) \
+    RisingMaintainer="ZNAIV" \
+    RisingChipset="Qualcomm SDM678"
