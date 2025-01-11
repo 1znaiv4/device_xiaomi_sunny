@@ -12,13 +12,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/sunny/device.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
-# Boot Animation
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
+WITH_GMS := true
+TARGET_USES_PICO_GAPPS := true
+TARGET_INCLUDE_EXTRA_APPS := false
+CUSTOM_MAINTAINER := ZNAIV
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_sunny
+PRODUCT_NAME := aosp_sunny
 PRODUCT_DEVICE := sunny
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := M2101K7AG
